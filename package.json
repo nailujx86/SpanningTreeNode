@@ -1,0 +1,24 @@
+{
+  "name": "spanningtree",
+  "version": "0.0.1",
+  "description": "A simple spanningtree API and library.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://spanningtree.glitch.me"
+  },
+  "license": "GPLv3",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
