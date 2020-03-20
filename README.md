@@ -14,4 +14,4 @@ Feel free to open up an issue over there at https://github.com/nailujx86/Spannin
 ## License
 This project is licensed under the MIT License.
 
-Things used from other projects here is my little css framework small.css which can be found here https://github.com/nailujx86/small.css and which is available under the MIT License as well.
+A embedded thing here is my little css framework small.css which can be found here https://github.com/nailujx86/small.css and which is available under the MIT License as well.
