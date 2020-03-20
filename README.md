@@ -1,16 +1,9 @@
-<h1 align="center">
-  SpanningTreeNode
-</h1>
-<div align="center">
-  🌳🌲🌳🌲🌳
-</div>
-<div align="center">
-  <strong>Sorry, sadly no trees but a <code>spanningtree</code> implementation</strong>
-</div>
-<br>
-<div align="center">
-  <img src="https://badge.glitch.me/spanningtree" alt="Glitch Badge">
-</div>
+# SpanningTreeNode
+🌳🌲🌳🌲🌳
+
+**Sorry, sadly no trees but a `spanningtree` implementation**
+
+![Glitch Badge](https://badge.glitch.me/spanningtree)
 
 ## Remix me!
 Click the button below to remix this project on glitch.com! 🎏
