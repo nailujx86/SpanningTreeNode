@@ -1,10 +1,7 @@
-# SpanningTreeNode
+# SpanningTreeNode ![Glitch Badge](https://badge.glitch.me/spanningtree)
 🌳🌲🌳🌲🌳
 
 **Sorry, sadly no trees but a `spanningtree` implementation**
-
-![Glitch Badge](https://badge.glitch.me/spanningtree)
-
 ## Remix me!
 Click the button below to remix this project on glitch.com! 🎏
 
