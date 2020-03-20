@@ -1,0 +1,26 @@
+.opacity {
+    opacity: 0.6;
+}
+body {
+    padding-bottom: 6em;
+}
+.footer {
+    font-size: .8em;
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+    background-color: #a7a7a7;
+    text-align: center;
+    color: #fff;
+}
+.gimme_space {
+    margin-top: 2.5em;
+}
+.undecorated {
+    color: inherit;
+    text-decoration: inherit;
+}
+form textarea {
+    resize: vertical;
+    border-radius: 2px;
+}
