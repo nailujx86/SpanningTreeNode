@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="small.css">
+    <link rel="stylesheet" type="text/css" href="utils.css">
+</head>
+
+<body>
+    <div class="c">
+        <header>
+            <h1 class="center"><a class="undecorated" href="/">SpanningTree</a></h1>
+            <p class="center">A SpanningTree Simulation in JavaScript</p>
+        </header>
+        <div class="r gimme_space">
+            <div class="i 9">
+                <div class="card">
+                    <div class="c">
+                        <h3>Data</h3>
+                        <form onsubmit="formSubmitted">
+                            <textarea id="input" rows=20 class="full" name="tree" placeholder="example.graph" spellcheck="false" required></textarea>
+                            <button type="button" class="b" onclick="fillTemplate()">Fill with Example</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="i 3">
+                <div class="card">
+                    <div class="c">
+                        <h3>Options</h3>
+                        <input type="checkbox" id="recursive">
+                        <label for="recursive">Recursive</label>
+                        <br>
+                        <label for="minhop">Minhop:</label>
+                        <input type="number" id="minhop" value="0" min="0" max="500" placeholder="5" required>
+                        <br>
+                        <label for="iterations">Iterations:</label>
+                        <input type="number" id="iterations" value="10" min="1" max="500" placeholder="10" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="r">
+        <div class="card">
+            <div class="c">
+                <button class="b primary full" onclick="simulate()">Simulate!</button>
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="r">
+            <div class="card">
+                <div class="c">
+                    <h3>Output</h3>
+                    <textarea class="full" placeholder="Output goes here.." rows="15" id="output" spellcheck="false" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="full footer">
+        Powered by <a href="https://github.com/nailujx86/small.css">small.css</a> - (c) 2020 Julian Blazek
+    </footer>
+    <script src="lib/spanningtree.js"></script>
+    <script>
+        function fillTemplate() {
+            document.getElementById("input").value = "Graph mygraph {\r\n// Node-IDs\r\n A = 5;\r\n B = 1;\r\n C = 3;\r\n D = 7;\r\n E = 6;\r\n F = 4;\r\n// Links und zugeh. Kosten\r\n A - B : 10;\r\n A - C : 10;\r\n B - D : 15;\r\n B - E : 10;\r\n C - D : 3;\r\n C - E : 10;\r\n D - E : 2;\r\n D - F : 10;\r\n E - F : 2;\r\n}";
+        }
+        var tree;
+        function simulate() {
+            var input = document.getElementById("input").value;
+            tree = new Parser({}).parse(input);
+            var minhop = Number(document.getElementById("minhop").value);
+            var iterations = Number(document.getElementById("iterations").value);
+            var recursive = document.getElementById("recursive").checked;
+            console.debug("Starting new simulation..");
+            tree.simulate(iterations, minhop, recursive);
+            document.getElementById("output").value = tree.toString();
+        }
+        /*
+        var tree = new Tree();
+        tree.addNode(new Node(1, "B"));
+        tree.addNode(new Node(3, "C"));
+        tree.addNode(new Node(4, "F"));
+        tree.addNode(new Node(5, "A"));
+        tree.addNode(new Node(6, "E"));
+        tree.addNode(new Node(7, "D"));
+
+        tree.addLink(new Link(1, 7, 15));
+        tree.addLink(new Link(7, 4, 10));
+        tree.addLink(new Link(4, 6, 2));
+        tree.addLink(new Link(6, 3, 10));
+        tree.addLink(new Link(3, 5, 10));
+        tree.addLink(new Link(5, 1, 10));
+        tree.addLink(new Link(1, 6, 10));
+        tree.addLink(new Link(3, 7, 3));
+        tree.addLink(new Link(7, 6, 2));
+        */
+    </script>
+</body>
+
+</html>
